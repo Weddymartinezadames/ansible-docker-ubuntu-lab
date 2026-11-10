@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  servidor1:
+    image: ubuntu-ansible
+    container_name: servidor1
+    ports:
+      - "2221:22"
+    networks:
+      - red-ansible
+
+  servidor2:
+    image: ubuntu-ansible
+    container_name: servidor2
+    ports:
+      - "2222:22"
+    networks:
+      - red-ansible
+
+  servidor3:
+    image: ubuntu-ansible
+    container_name: servidor3
+    ports:
+      - "2223:22"
+    networks:
+      - red-ansible
+
+  servidor4:
+    image: ubuntu-ansible
+    container_name: servidor4
+    ports:
+      - "2224:22"
+    networks:
+      - red-ansible
+
+  servidor5:
+    image: ubuntu-ansible
+    container_name: servidor5
+    ports:
+      - "2225:22"
+    networks:
+      - red-ansible
+
+networks:
+  red-ansible:
+    driver: bridge
